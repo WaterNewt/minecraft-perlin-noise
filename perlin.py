@@ -23,6 +23,7 @@ seed = 0
 #%%
 # Creating 2D array of Y levels
 perlin_map = generate_perlin_noise(xpix, ypix, octaves, seed)
+perlin_map = np.clip(perlin_map, -1, 1)
 my_map = []
 for index,value in enumerate(perlin_map):
     my_map.append([])
